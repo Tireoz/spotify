@@ -1,5 +1,6 @@
 import { API } from "./API";
-import { CustomPlugin, DisTubeError, Playlist, Song, checkInvalidKey } from "distube";
+import { CustomPlugin, DisTubeError, Playlist, checkInvalidKey } from "distube";
+import type { Song } from "distube";
 import type { VoiceBasedChannel } from "discord.js";
 import type { PlayOptions, PlaylistInfo, Queue } from "distube";
 import SoundCloudPlugin, { SearchType } from "@distube/soundcloud";
@@ -66,7 +67,7 @@ export class SpotifyPlugin extends CustomPlugin {
     this.api = new API(options.api?.clientId, options.api?.clientSecret, options.api?.topTracksCountry);
   }
 
-  override async validate(url: string) {
+  override validate(url: string) {
     if (typeof url !== "string" || !url.includes("spotify")) return false;
     try {
       const parsedURL = this.api.parseUrl(url);
