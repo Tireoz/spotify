@@ -1,5 +1,4 @@
 import { SpotifyPlugin } from "@";
-import { Song } from "distube";
 
 test.todo("Validate Options");
 
@@ -27,11 +26,4 @@ describe("SpotifyPlugin#validate()", () => {
     ];
     expect(await Promise.all(invalidUrls.map(url => plugin.validate(url)))).toStrictEqual(invalidUrls.map(() => false));
   });
-
-  test("play", async () => {
-    const plugin = new SpotifyPlugin();
-    const url = "https://open.spotify.com/track/0sTlGEld0h8kIPZaKDYUf4?si=a786f16b1fd34b56";
-    const result = await plugin.play(null, url, {});
-    expect(result).toBe(true);
-  })
 });

@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "@tireoz/spotify",
   "description": "A DisTube custom plugin for supporting Spotify with SoundCloud.",
   "main": "./dist/index.js",
