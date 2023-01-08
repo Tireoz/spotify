@@ -101,7 +101,7 @@ export class SpotifyPlugin extends CustomPlugin {
       while (!firstSong) await getFirstSong();
 
       if (!firstSong) {
-        throw new DisTubeError("SPOTIFY_PLUGIN_NO_RESULT", `Cannot find any tracks of "${name}" on YouTube.`);
+        throw new DisTubeError("SPOTIFY_PLUGIN_NO_RESULT", `Cannot find any tracks of "${name}" on SoundCloud.`);
       }
       const queue = DT.getQueue(voiceChannel);
 
