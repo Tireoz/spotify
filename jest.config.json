@@ -1,0 +1,15 @@
+{
+  "testEnvironment": "node",
+  "collectCoverage": true,
+  "collectCoverageFrom": ["src/**/*.ts"],
+  "coverageDirectory": "coverage",
+  "coverageReporters": ["text", "lcov", "clover"],
+  "testMatch": ["**/?(*.)+(spec|test).[jt]s?(x)"],
+  "setupFiles": ["dotenv/config"],
+  "verbose": true,
+  "roots": ["<rootDir>/tests/"],
+  "moduleNameMapper": {
+    "^@/(.*)$": "<rootDir>/src/$1",
+    "^@$": "<rootDir>/src"
+  }
+}
